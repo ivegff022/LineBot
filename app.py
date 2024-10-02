@@ -7,6 +7,7 @@ import os
 
 app = Flask(__name__)
 
+# 使用環境變數存儲 LINE Channel Access Token 和 Secret
 line_bot_api = LineBotApi(os.environ['CHANNEL_ACCESS_TOKEN'])
 handler = WebhookHandler(os.environ['CHANNEL_SECRET'])
 
@@ -27,10 +28,10 @@ def callback():
 # 處理 FollowEvent 事件 (用戶開始關注機器人)
 @handler.add(FollowEvent)
 def handle_follow(event):
-    # 回覆自動訊息
+    welcome_message = "你好，我是XR製作顧問"
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text="你好，我是XR製作顧問")
+        TextSendMessage(text=welcome_message)
     )
 
 # 處理文字訊息事件

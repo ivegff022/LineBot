@@ -37,8 +37,9 @@ def handle_follow(event):
 # 處理文字訊息事件
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    message = TextSendMessage(text=event.message.text)
-    line_bot_api.reply_message(event.reply_token, message)
+    # 這裡你可以放其他處理邏輯
+    # 移除了 line_bot_api.reply_message 來停止自動回覆訊息
+    pass  # 或者你可以處理其他需要的功能
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))

@@ -1,4 +1,17 @@
-Flask
-line-bot-sdk
-gunicorn
+# Flask: 用於建立 Web 應用程式
+flask==2.2.3
 
+# LINE Bot SDK: 與 LINE Messaging API 整合
+line-bot-sdk==2.2.1
+
+# Gunicorn: Python 的 WSGI HTTP 伺服器，用於部署 Flask
+gunicorn==20.1.0
+
+# SpeechRecognition: 用於語音辨識
+SpeechRecognition==3.9.0
+
+# gTTS: Google Text-to-Speech，用於將文字轉換為語音
+gtts==2.3.2
+
+# pydub: 用於音訊處理（轉檔、剪輯）
+pydub==0.25.1
